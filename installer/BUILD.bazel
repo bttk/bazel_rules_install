@@ -13,6 +13,7 @@
 # limitations under the License.
 
 load("@bazel_skylib//:bzl_library.bzl", "bzl_library")
+load("@rules_python//python:defs.bzl", "py_binary")
 
 licenses(["notice"])  # Apache 2.0
 
@@ -37,4 +38,13 @@ bzl_library(
         "@bazel_skylib//lib:paths",
         "@bazel_skylib//lib:shell",
     ],
+)
+
+py_binary(
+    name = "installer_tool",
+    srcs = [
+        "installer_tool.py",
+    ],
+    visibility = ["//visibility:public"],
+    deps = ["@rules_python//python/runfiles"],
 )

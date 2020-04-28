@@ -26,6 +26,7 @@ local_repository(
     path = "./docs",
 )
 
+# Buildifier rule
 http_archive(
     name = "com_github_bazelbuild_buildtools",
     sha256 = "86f62b307c9b4f6f4df7c4b3b583a617f10d32a13af3f8d8c311e4f87010410e",
@@ -35,6 +36,7 @@ http_archive(
     ],
 )
 
+# Used by buildifier
 http_archive(
     name = "io_bazel_rules_go",
     sha256 = "af04c969321e8f428f63ceb73463d6ea817992698974abeff0161e069cd08bd6",
@@ -44,6 +46,7 @@ http_archive(
     ],
 )
 
+# Used by buildifier
 http_archive(
     name = "com_google_protobuf",
     sha256 = "a79d19dcdf9139fa4b81206e318e33d245c4c9da1ffed21c87288ed4380426f9",
